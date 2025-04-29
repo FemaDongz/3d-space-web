@@ -269,4 +269,11 @@ class UIManager {
     const modal = document.getElementById('project-modal');
     modal.style.display = 'none';
   }
+  // Trigger Enter with keyboard
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        this.enterUniverse();
+        playSound('warp');
+      }
+    });
 }
